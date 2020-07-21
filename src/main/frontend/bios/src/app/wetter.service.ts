@@ -14,5 +14,6 @@ export class WetterService {
 }
 
 export interface Wetter {
-    schoen: boolean;
+    stadt: string;
+    temperatur: number;
 }

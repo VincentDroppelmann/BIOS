@@ -1,4 +1,3 @@
-import org.jetbrains.kotlin.codegen.generateBridgeForMainFunctionIfNecessary
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 import org.springframework.boot.gradle.tasks.run.BootRun
 
@@ -56,4 +55,9 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<BootRun> {
     sourceResources(sourceSets.main.get())
+}
+
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    freeCompilerArgs = listOf("-Xinline-classes")
 }

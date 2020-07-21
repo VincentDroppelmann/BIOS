@@ -8,9 +8,12 @@ class WetterController {
 
     @GetMapping("/api/wetter")
     fun wetter() : List<Wetter> {
-        return listOf(Wetter(false), Wetter(false))
+        return listOf(
+                Wetter("Vechta", GradCelsius(17.5)),
+                Wetter("Damme", GradCelsius(22.7))
+        )
     }
 
 }
-
-data class Wetter(val schoen: Boolean)
+inline class GradCelsius(val wert: Double)
+data class Wetter(val stadt: String, val temperatur: GradCelsius)
