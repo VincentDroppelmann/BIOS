@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class WetterController {
 
-    @GetMapping("/")
+    @GetMapping("/api/wetter")
     fun wetter() : List<Wetter> {
-        return listOf(Wetter(true), Wetter(false))
+        return listOf(Wetter(false), Wetter(false))
     }
 
 }
