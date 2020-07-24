@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import {Wetter, WetterService} from "./wetter.service";
 
 @Component({
   selector: 'app-root',
@@ -8,10 +7,6 @@ import {Wetter, WetterService} from "./wetter.service";
 })
 export class AppComponent {
   title = 'BIOS';
-  wetters: Wetter[]
 
-  constructor(private service: WetterService) {
-    this.service.getWetter()
-      .subscribe(w => this.wetters = w);
-  }
+  constructor() { }
 }

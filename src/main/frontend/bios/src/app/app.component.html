@@ -1,9 +1,6 @@
-<h1>{{title}}</h1>
-
-<ul>
-  <li *ngFor="let wetter of wetters">
-    <span>Wetter: {{wetter.stadt}}: {{wetter.temperatur}}</span>
-  </li>
-</ul>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">{{title}}</a>
+  <a class="nav-link" routerLink="/buecher" routerLinkActive="active">Buchliste</a>
+</nav>
 
 <router-outlet></router-outlet>

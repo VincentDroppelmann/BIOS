@@ -1,0 +1,11 @@
+<div class="spinner-border text-primary" role="status" *ngIf="laedt">
+  <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="!laedt">
+<ul>
+  <li *ngFor="let buch of buecher">
+    <span>Buch: {{buch.titel}}</span>
+  </li>
+</ul>
+</div>
